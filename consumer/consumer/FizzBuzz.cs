@@ -17,7 +17,7 @@ namespace consumer {
             int fromService = this.ServiceProxy.GetValue();
             // for each call, return the value via the ref parameter
             value = fromService;
-
+            
             /*
              * For any number that the service returns
              * If the number is equally divisible by 3, return 'Fizz'
@@ -25,8 +25,17 @@ namespace consumer {
              * if the number is equally divisible by both 3 and 5, return 'FizzBuzz'
              * otherwise, return the number
             */
-            
-            throw new NotImplementedException("Evaluate FizzBuzz Here");
+
+            string returnValue = null;
+            if (value % 3 == 0) {
+                returnValue = "Fizz";
+            }
+            if (value % 5 == 0) {
+                returnValue += "Buzz";
+            }
+
+            return returnValue ?? value.ToString();
+
 
 
 

@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using Moq;
 using Xunit;
 
@@ -9,7 +9,16 @@ namespace Test {
         [Fact]
         public void TestFizz() {
 
-            throw new NotImplementedException();
+            Mock<consumer.Infrastructure.IServiceProxy> mockedProxy = new Mock<consumer.Infrastructure.IServiceProxy>();
+            mockedProxy.Setup(g => g.GetValue()).Returns(84);
+
+            consumer.FizzBuzz fb = new consumer.FizzBuzz();
+            fb.ServiceProxy = mockedProxy.Object;
+
+            int value = 0;
+            string returnValue = fb.DoFizzBuzz(ref value);
+
+            Assert.Equal(returnValue, "Fizz");
 
         }
     }

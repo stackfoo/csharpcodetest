@@ -16,9 +16,11 @@ namespace consumer.Infrastructure {
 
         int IServiceProxy.GetValue() {
 
+            FizzBuzzService.ServiceClient client = new FizzBuzzService.ServiceClient();
 
+            return client.GetData();
 
-            throw new NotImplementedException("Wire up service here");
+            
             
 
 

@@ -21,7 +21,11 @@ namespace consumer {
 
             //call fizzbuzz.dofizzbuzz 50 times, outputing the value that the service used (returned via ref param)
             //and the fizzbuzz evaluate returned by fizzbuzz operation.
-            throw new NotImplementedException("Display FizzBuzz Results Here");
+            int refValue = 0; string returnValue;
+            for (int i = 1; i <= 50; i++) {
+                returnValue = fb.DoFizzBuzz(ref refValue);
+                Console.WriteLine("{0}: {1}", refValue.ToString(), returnValue);
+            }
 
 
             Console.WriteLine("All Done!  Yay!  Press [Enter] to close.");

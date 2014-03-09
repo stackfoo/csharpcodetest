@@ -16,7 +16,8 @@ namespace consumer.Infrastructure {
 
         int IServiceProxy.GetValue() {
 
-            //servic expects that a header be passed.. the contract for which is defined in the service reference.
+            //servic expects that a header be passed (name = "Test", namespace="")
+            //.. the contract for which is defined in the service reference.
 
             throw new NotImplementedException("Wire up service here");
             

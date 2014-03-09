@@ -10,15 +10,11 @@ namespace Service {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService {
-     
+
+
+
         public int GetData() {
 
-            int headerPositon = OperationContext.Current.IncomingMessageHeaders.FindHeader("TestHeader", string.Empty);
-            ServiceHeader header = OperationContext.Current.IncomingMessageHeaders.GetHeader<ServiceHeader>(headerPositon);
-
-            if (!header.StringValue.Equals("password")) {
-                throw new FaultException("Invalid Password");
-            }
 
             return new Random().Next(0, 101);
             

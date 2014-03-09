@@ -15,21 +15,7 @@ namespace Service {
         int GetData();
 
 
-        // TODO: Add your service operations here
     }
 
 
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    [DataContract]
-    public class ServiceHeader {
-
-        string stringValue = string.Empty;
-
-
-        [DataMember]
-        public string StringValue {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
-    }
 }

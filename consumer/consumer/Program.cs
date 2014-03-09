@@ -19,7 +19,10 @@ namespace consumer {
             container.BuildUp<FizzBuzz>(fb);
 
 
-            fb.DoFizzBuzz();
+            //call fizzbuzz.dofizzbuzz 50 times, outputing the value that the service used (returned via ref param)
+            //and the fizzbuzz evaluate returned by fizzbuzz operation.
+            
+
 
             Console.WriteLine("All Done!  Yay!  Press [Enter] to close.");
             Console.ReadLine();

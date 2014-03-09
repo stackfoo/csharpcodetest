@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +16,11 @@ namespace consumer.Infrastructure {
 
         int IServiceProxy.GetValue() {
 
+            //servic expects that a header be passed.. the contract for which is defined in the service reference.
+
             throw new NotImplementedException("Wire up service here");
+            
+
 
         }
 

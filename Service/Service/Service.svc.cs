@@ -16,7 +16,7 @@ namespace Service {
         public int GetData() {
 
 
-            return new Random().Next(0, 101);
+            return Global.RandomGenerator.Next(0, 101);
             
       
         }

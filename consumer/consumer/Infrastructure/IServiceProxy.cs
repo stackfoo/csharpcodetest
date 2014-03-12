@@ -16,9 +16,9 @@ namespace consumer.Infrastructure {
 
         int IServiceProxy.GetValue() {
 
-
-
-            throw new NotImplementedException("Wire up service here");
+            consumer.ServiceReference1.ServiceClient cli = new ServiceReference1.ServiceClient();
+            return cli.GetData();
+           // throw new NotImplementedException("Wire up service here");
             
 
 
